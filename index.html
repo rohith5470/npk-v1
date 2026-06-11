@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart NPK Fertilizer Recommendation System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+  <div class="nav-brand">
+    <span>🌱</span> NPK Advisor
+  </div>
+  <ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Guidelines</a></li>
+  </ul>
+</nav>
+
+<div class="hero">
+  <h1>Smart <em>NPK</em> Fertilizer Recommendation</h1>
+  <p>Enter your soil test values and crop type. The system will identify nutrient deficiencies or excesses and suggest the right fertilizer action.</p>
+  <div class="hero-badges">
+    <span class="badge">🧪 Soil Analysis</span>
+    <span class="badge">🌾 Crop-Specific</span>
+    <span class="badge">📋 Instant Recommendations</span>
+  </div>
+</div>
+
+<div class="main">
+
+  <!-- INPUT FORM -->
+  <div class="card">
+    <div class="card-title"><span class="icon">📥</span> Soil & Field Information</div>
+
+    <div class="form-grid" style="margin-bottom:20px;">
+      <div class="form-group">
+        <label>Farmer / Field Name</label>
+        <input type="text" id="fieldName" placeholder="e.g. Ravi Kumar – Field A">
+      </div>
+      <div class="form-group">
+        <label>Crop Type</label>
+        <select id="cropType">
+          <option value="">-- Select Crop --</option>
+          <option value="rice">Rice</option>
+          <option value="wheat">Wheat</option>
+          <option value="maize">Maize</option>
+          <option value="cotton">Cotton</option>
+          <option value="sugarcane">Sugarcane</option>
+          <option value="soybean">Soybean</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Field Area <span class="unit">(acres)</span></label>
+        <input type="number" id="area" placeholder="e.g. 2.5" min="0.1" step="0.1">
+      </div>
+      <div class="form-group">
+        <label>Soil pH</label>
+        <input type="number" id="ph" placeholder="e.g. 6.5" min="0" max="14" step="0.1">
+      </div>
+    </div>
+
+    <div class="card-title" style="margin-top:8px;">
+      <span class="icon">🧬</span> NPK Soil Test Values
+      <span style="font-weight:400;color:#777;font-size:0.85rem;margin-left:8px;">(kg/ha)</span>
+    </div>
+    <div class="npk-row">
+      <div class="npk-block form-group npk-n">
+        <label><span class="npk-letter">N</span><br>Nitrogen <span class="unit">(kg/ha)</span></label>
+        <input type="number" id="nitrogen" placeholder="e.g. 180" min="0">
+      </div>
+      <div class="npk-block form-group npk-p">
+        <label><span class="npk-letter">P</span><br>Phosphorus <span class="unit">(kg/ha)</span></label>
+        <input type="number" id="phosphorus" placeholder="e.g. 45" min="0">
+      </div>
+      <div class="npk-block form-group npk-k">
+        <label><span class="npk-letter">K</span><br>Potassium <span class="unit">(kg/ha)</span></label>
+        <input type="number" id="potassium" placeholder="e.g. 120" min="0">
+      </div>
+    </div>
+
+    <button class="btn-analyze" onclick="analyze()">🔍 Analyze & Get Recommendation</button>
+  </div>
+
+  <!-- RESULTS -->
+  <div class="card" id="results">
+    <div class="card-title"><span class="icon">📊</span> Analysis Results</div>
+
+    <div id="statusBanner" class="status-banner"></div>
+
+    <div class="npk-results" id="npkCards"></div>
+
+    <div class="card-title" style="margin-top:8px;"><span class="icon">💊</span> Fertilizer Recommendations</div>
+    <table class="rec-table">
+      <thead>
+        <tr>
+          <th>Nutrient</th>
+          <th>Status</th>
+          <th>Action</th>
+          <th>Suggested Fertilizer</th>
+        </tr>
+      </thead>
+      <tbody id="recTableBody"></tbody>
+    </table>
+
+    <div id="generalNote"></div>
+  </div>
+
+</div>
+
+<footer>
+  Smart NPK Fertilizer Recommendation System &nbsp;·&nbsp; Academic Mini-Project &nbsp;·&nbsp; Rule-Based v1.0
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>
