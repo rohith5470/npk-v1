@@ -66,14 +66,16 @@ This project aims to provide a simple and transparent rule-based recommendation 
 * Recommendation generation
 * Responsive layout
 
+ ### V2
+- User login and sign up
+- registraion page added
+
+
 ---
 
 ## Planned Enhancements
 
-### V2
-- User login and authentication
-- Save analysis results
-- History tracking using MySQL
+
 
 ### V3
 - Basic charts for previous soil reports
