@@ -68,8 +68,10 @@ This project aims to provide a simple and transparent rule-based recommendation 
 
  ### V2
 - User login and sign up
-- registraion page added
-
+- registration page added
+- improved rule based workflow
+- Added guidelines and privacy policy
+  
 
 ---
 
