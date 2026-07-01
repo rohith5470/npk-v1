@@ -1,3 +1,10 @@
+
+<img width="1917" height="972" alt="image" src="https://github.com/user-attachments/assets/8df136d2-0fec-4f7f-8aa9-b7e318cf16f9" />
+
+
+
+
+
 # Smart NPK Fertilizer Recommendation System
 
 ## Overview
